@@ -51,7 +51,7 @@ public class DragonSlayer {
       //Battle
    int action;
       
-   System.out.println("*You are now out fighting the legendary SKYRIM, a dragon from the depths of Mordor, born in Hogwarts.");
+   System.out.println("*You are now out fighting the legendary SKYRIM, a dragon from the deeps of Mordor, born in Hogwarts.");
    while(dragonHealth > 0 && health > 0) {
       System.out.println("Attack (for " + damage + " damage) or use potion (for " + potion + ") more health points? (1 for attack; 2 for potion, anything else for nothing)");
       action = scan.nextInt();
