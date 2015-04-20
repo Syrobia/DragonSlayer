@@ -1,8 +1,18 @@
 //Ammad Hashmi(Syrobot) www.github.com/Syrobot
 //package com.dragonslayer.syrobia.github
 
+/** TODO:
+  * Create Difficulty Levels
+  * Fix try/catch statement for weapon selection (InputMismatchException)
+  * Possible JPanel
+  */
+
+//Java Needed Utilities
 import java.util.Scanner;
 import java.util.Random;
+
+//Java Needed Exception Catchers
+import java.util.InputMismatchException;
 
 public class DragonSlayer {
    public static void main (String[] args) {
@@ -15,24 +25,39 @@ public class DragonSlayer {
     int atkEffect = 0;
     int damage = 10 + atkEffect;
     int dragonAttack = r.nextInt(26);
-    int dragonHealth = 250;
+    int dragonHealth = 100;
     int potion = r.nextInt(50);
    
    String fight= new String();
    //Layout of Game to User
-   System.out.println("King: Hello Knight! So today we are...");
+   System.out.println("King: Hello Knight!");
+   scan.nextLine();
    System.out.println("Unknown: ROAAAAAAAAAAR!!!!!");
+   scan.nextLine();
    System.out.println("King: What was that?");
+   scan.nextLine();
    System.out.println("Squire: SIR! It is it, it has come for us!");
+   scan.nextLine();
    System.out.println("King: No.. the legends... can't be true...");
+   scan.nextLine();
    System.out.println("Squire: Yes sir, SKYRIM IS HERE! Will you Knight defeat the dragon for us? (Yes/No)");
-   fight = scan.next();
-   System.out.println(fight + " you say? Go and fight it you noob, here choose a weapon and some armor.");
+   fight = scan.nextLine();
+   System.out.println("King: " + fight + " you say? Go and fight it you noob, here choose a weapon and some armor.");
    
-   int weapon;  
+   int weapon = 0; 
+   //boolean select = true; 
    //Choose weapon
-   System.out.println("Pick number 1, 2, or 3.");
-   weapon = scan.nextInt();
+   //while(select) {
+   //try {
+      System.out.println("Pick number 1, 2, or 3.");
+      weapon = scan.nextInt(); 
+   //} catch (InputMismatchException e) { 
+    //  System.out.println("Error!"); weapon = scan.nextInt();
+     // }
+    //  select = false;
+    //  }
+   
+   
    while (weapon < 1 || weapon > 3) {
        System.out.println("That's not an option. (Type: 1, 2, or 3)");
        weapon = scan.nextInt();
@@ -64,17 +89,22 @@ public class DragonSlayer {
          dragonHealth = dragonHealth - damage;
          health = health - dragonAttack;
          System.out.println("Dragon health: " + dragonHealth);
-         System.out.println("Your health: " + health);}
-         else if (health + potion > 100){
+         System.out.println("SKYRIM attacks!");
+         System.out.println("Your health: " + health);
+         } else if (health + potion > 100){
             health = 100;
             System.out.println("Your health: " + health);
-            health = health - dragonAttack + 5;
+            health = health - (dragonAttack + 5);
             System.out.println("Dragon attacks, Your health: " + health);
-            }
-            else {
+            System.out.println("Dragon health: " + dragonHealth);
+            } else {
                health = health + potion;
                System.out.println("Your health: " + health);
-               health = health - dragonAttack + 5; }
+               health = health - (dragonAttack + 5);
+               System.out.println("SKYRIM attacks!");
+               System.out.println("Your health: " + health);
+               System.out.println("Dragon health: " + dragonHealth); 
+               }
                
       i = 0;
       if(health <= 0)
