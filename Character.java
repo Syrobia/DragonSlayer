@@ -18,4 +18,57 @@ public class Character
 		atkEffect = aE;
 		hpEffect = hE;
 	}
+	
+	public String attack(Character e)
+	{
+		e.setHealth(e.getHealth - (attack + atkEffect))
+	}
+	
+	public int setHealth(int h)
+	{
+		int oldHealth = health;
+		health = h;
+		return oldHealth;
+	}
+	
+	public int setAttack(int a)
+	{
+		int oldAttack = attack;
+		attack a;
+		return oldAttack;
+	}
+	
+	public int setAtkEffect(int aE)
+	{
+		oldAEffect = atkEffect;
+		atkEffect = aE;
+		return oldAEffect;
+	}
+	
+	public int setHpEffect(int hE)
+	{
+		oldHpEffect = hpEffect;
+		hpEffect = hE;
+		return oldHpEffect;
+	}
+	
+	public int getHealth()
+	{
+		return health;
+	}
+	
+	public int getAttack()
+	{
+		return attack;
+	}
+	
+	public int getAtkEffect()
+	{
+		return atkEffect;
+	}
+	
+	public int getHpEffect()
+	{
+		return hpEffect;
+	}
 }
