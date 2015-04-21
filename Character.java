@@ -11,64 +11,54 @@ public class Character
 	private int atkEffect;
 	private int hpEffect;
 	
-	public Character(int h, int a, int aE, int hE)
-	{
+	public Character(int h, int a, int aE, int hE){
 		health = h;
 		attack = a;
 		atkEffect = aE;
 		hpEffect = hE;
 	}
 	
-	public String attack(Character e)
-	{
+	public String attack(Character e){
 		e.setHealth(e.getHealth - (attack + atkEffect))
 	}
 	
-	public int setHealth(int h)
-	{
+	public int setHealth(int h){
 		int oldHealth = health;
 		health = h;
 		return oldHealth;
 	}
 	
-	public int setAttack(int a)
-	{
+	public int setAttack(int a){
 		int oldAttack = attack;
 		attack a;
 		return oldAttack;
 	}
 	
-	public int setAtkEffect(int aE)
-	{
+	public int setAtkEffect(int aE){
 		oldAEffect = atkEffect;
 		atkEffect = aE;
 		return oldAEffect;
 	}
 	
-	public int setHpEffect(int hE)
-	{
+	public int setHpEffect(int hE){
 		oldHpEffect = hpEffect;
 		hpEffect = hE;
 		return oldHpEffect;
 	}
 	
-	public int getHealth()
-	{
+	public int getHealth(){
 		return health;
 	}
 	
-	public int getAttack()
-	{
+	public int getAttack(){
 		return attack;
 	}
 	
-	public int getAtkEffect()
-	{
+	public int getAtkEffect(){
 		return atkEffect;
 	}
 	
-	public int getHpEffect()
-	{
+	public int getHpEffect(){
 		return hpEffect;
 	}
 }
