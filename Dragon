@@ -1,0 +1,21 @@
+//started by Steven Porterfield (Syrobot) www.github.com/Syrobot
+//package com.dragonslayer.syrobia.github
+
+import java.util.Random;
+
+public class Dragon extends Character 
+{
+  public static final int MAX_HEALTH;
+	
+	public Character(int h, int a, int aE, int hE){
+		super(h, a, aE, hE);
+	}
+	
+	public String typeOfDragon(){
+	int temp;
+	Random generator = new Random();
+	temp = generator.nextInt(2)+1; 
+	}
+}
+	
+	
