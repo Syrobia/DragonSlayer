@@ -18,6 +18,15 @@ public class Character
 		hpEffect = hE;
 	}
 	
+	//Precondition: h+a = 10
+	public Character (int h, int a)
+	{
+		health = h*5;
+		attack = a*5;
+		atkEffect = (int) (Math.random()*attack) + 1;
+		hpEffect = (int) (Math.random()*health) + 1;
+	}
+	
 	public String attack(Character e){
 		e.setHealth(e.getHealth - (attack + atkEffect))
 	}
