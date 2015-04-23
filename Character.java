@@ -36,7 +36,7 @@ public class Character
 	}
 	
 	public String attack(Character e){
-		e.setHealth(e.getHealth - (attack + atkEffect))
+		e.setHealth(e.getHealth - (attack + atkEffect));
 	}
 	
 	public int setHealth(int h){
@@ -47,18 +47,18 @@ public class Character
 	
 	public int setAttack(int a){
 		int oldAttack = attack;
-		attack a;
+		attack = a;
 		return oldAttack;
 	}
 	
 	public int setAtkEffect(int aE){
-		oldAEffect = atkEffect;
+		int oldAEffect = atkEffect;
 		atkEffect = aE;
 		return oldAEffect;
 	}
 	
 	public int setHpEffect(int hE){
-		oldHpEffect = hpEffect;
+		int oldHpEffect = hpEffect;
 		hpEffect = hE;
 		return oldHpEffect;
 	}
