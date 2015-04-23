@@ -37,18 +37,18 @@ public class DragonSlayer {
    scan.nextLine();
    System.out.println("King: What was that?");
    scan.nextLine();
-   System.out.println("Squire: SIR! It is it, it has come for us!");
+   System.out.println("Squire: SIR! It's here! It has come for us!");
    scan.nextLine();
    System.out.println("King: No.. the legends... can't be true...");
    scan.nextLine();
-   System.out.println("Squire: Yes sir, SKYRIM IS HERE! Will you Knight defeat the dragon for us? (Yes/No)");
+   System.out.println("Squire: Yes sir, SKYRIM IS HERE! Will you, Knight, defeat the dragon for us? (Yes/No)");
    fight = scan.nextLine(); 
-   System.out.println("King: " + fight + " you say? Go and fight it you noob, here choose a weapon and some armor.");
+   System.out.println("King: " + fight + " you say? Go and fight it you noob, here -- choose a weapon and some armor.");
    
    int weapon = 0; //Used in weapon selection
    // The following try/catch will be trying to make sure an int is entered and not anything else
    do{
-       System.out.println("Pick number 1, 2, or 3.");
+       System.out.println("Pick a number from 1 to 3.");
        if(scan.hasNextInt()){
            weapon = scan.nextInt();
            break;
@@ -67,7 +67,7 @@ public class DragonSlayer {
          dragonAttack = dragonAttack - defEffect;
          System.out.println("You have chosen the Ice Sword (Def Increased by 15)");
          }else{ //Choosing 3 will result in to added effect
-      System.out.println("You have chosen a dull sword, I hope you know what your doing");
+      System.out.println("You have chosen a dull sword, I hope you know what you're doing");
          }
       
       //Battle
@@ -101,12 +101,12 @@ public class DragonSlayer {
                System.out.println("Your health: " + health);
                System.out.println("Dragon health: " + dragonHealth); 
                } else { //If action 1 or 2 isn't chosen, idle...
-                System.out.println("You stood their like a bufoon...");
+                System.out.println("You stood there like a buffoon...");
                }
                
       
       if(health <= 0) //If player dies...
-         System.out.println("You can't fight with a sword you dimwit...YOU LOSE");
+         System.out.println("You can't fight with a sword, you dimwit...YOU LOSE");
       if(dragonHealth <= 0) //If dragon dies...
          System.out.println("You have saved the kindgom from SKYRIM! HOORAH! Now back to work...");
      } 
