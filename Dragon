@@ -52,19 +52,26 @@ public class Dragon extends Character
 	
 	public int getEffect()
 	int addedEffect;
+	int negativeEffect;
 	if (typeOfDragon.equals("fire"))
-		addedEffect = a + 50;
+		addedEffect = a + 75;
+		negativeEffect = h - 15;
 	if (typeOfDragon.equals("lightning"))
-		addedEffect = a + 200;
+		addedEffect = a + 225;
+		negativeEffect = h - 25;
 	if (typeOfDragon.equals("ice"))
-		addedEffect = h + 50;
+		addedEffect = h + 75;
+		negativeEffect = a - 15;
 	if (typeOfDragon.equals("rock"))
-		addedEffect = h + 200;
+		addedEffect = h + 225;
+		negativeEffect = a - 220;
 	if (typeOfDragon.equals("teja"))
 		addedEffect = a + 360;
+		negativeEffect = h + 100;
 	if (addedEffect > MAX_HEALTH)
 		addedEffect = MAX_HEALTH;
 	return addedEffect;
+	return negativeEffect;
 	}
 }
 	
