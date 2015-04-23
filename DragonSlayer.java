@@ -3,8 +3,8 @@
 
 /** TODO:
   * Create Difficulty Levels
-  * Fix try/catch statement for weapon selection (InputMismatchException)
   * Possible JPanel
+  * Start to implement the object classes created
   */
 
 //Java Needed Utilities
@@ -27,7 +27,7 @@ public class DragonSlayer {
     int dragonAttack = r.nextInt(26); //Randomized Dragon Attack
     int dragonHealth = 100; //Health of dragon
     int potion = r.nextInt(50); //Used to increase player health (changes per tern)
-    static final int MAX_HEALTH = 100; //Max health of player
+    final int MAX_HEALTH = 100; //Max health of player
    
    String fight= new String(); //Used in Script
    //Layout of Game to User 
@@ -47,34 +47,28 @@ public class DragonSlayer {
    
    int weapon = 0; //Used in weapon selection
    // The following try/catch will be trying to make sure an int is entered and not anything else
-   
-   //boolean select = true; 
-   //Choose weapon
-   //while(select) {
-   //try {
-      System.out.println("Pick number 1, 2, or 3.");
-      weapon = scan.nextInt(); 
-   //} catch (InputMismatchException e) { 
-    //  System.out.println("Error!"); weapon = scan.nextInt();
-     // }
-    //  select = false;
-    //  }
-   
-   
-   while (weapon < 1 || weapon > 3) { //If wrong int is entered
-       System.out.println("That's not an option. (Type: 1, 2, or 3)");
-       weapon = scan.nextInt();
+   do{
+       System.out.println("Pick number 1, 2, or 3.");
+       if(scan.hasNextInt()){
+           weapon = scan.nextInt();
+           break;
+       }else{
+           System.out.println("Enter an integer only");
+           scan.nextLine();
        }
+   }while(true);
+   
    if(weapon == 1) { //choosing 1 will increase attack by 10
       atkEffect = 10;
       damage = damage + atkEffect;
-      System.out.println("You have chosen the Fire Sword (Atk Increased by 10)");}
-   else if(weapon == 2){ //choosing 2 will decrease dragon attack (aka Player Defense)
-      defEffect = 15;
-      dragonAttack = dragonAttack - defEffect;
-      System.out.println("You have chosen the Ice Sword (Def Increased by 15)");}
-   else{ //Choosing 3 will result in to added effect
-      System.out.println("You have chosen a dull sword, I hope you know what your doing");}
+      System.out.println("You have chosen the Fire Sword (Atk Increased by 10)");
+      }else if(weapon == 2){ //choosing 2 will decrease dragon attack (aka Player Defense)
+         defEffect = 15;
+         dragonAttack = dragonAttack - defEffect;
+         System.out.println("You have chosen the Ice Sword (Def Increased by 15)");
+         }else{ //Choosing 3 will result in to added effect
+      System.out.println("You have chosen a dull sword, I hope you know what your doing");
+         }
       
       //Battle
    int action; //Represents action taken, either attack, use potion, etc.
