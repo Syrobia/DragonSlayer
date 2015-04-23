@@ -5,31 +5,17 @@ import java.util.Random;
 
 public class Dragon extends Character 
 {
-  private static final int MAX_HEALTH = 500;
+  private static final int MAX_HEALTH = 750;
   private String typeOfDragon;
 	
 	public Dragon(int h, int a, int aE, int hE){
 		super(h, a, aE, hE);
 	}
 	
-	public String typeOfDragon(){
-	int temp;
-	Random generator = new Random();
-	temp = generator.nextInt(3)+1; 
-	if (temp = 1)
-		typeOfDragon = "fire";
-	else if (temp = 2)
-		typeOfDragon = "ice";
-	else
-		typeOfDragon = "normal";
-	
-	return typeOfDragon;
-	}
-	
 	public int generateHealth{
 	Random generator = new Random();
 	h = generator.nextInt(3)+1;
-	h *= 100;
+	h *= 200;
 	retrun h;
 	}
 	
@@ -40,12 +26,30 @@ public class Dragon extends Character
 	return a;
 	}
 	
+	public String typeOfDragon(){
+	int temp;
+	Random generator = new Random();
+	temp = generator.nextInt(3)+1; 
+	if (temp = 1)
+		typeOfDragon = "fire";
+	else if (temp = 2)
+		typeOfDragon = "ice";
+	else if (temp = 3)
+		typeOfDragon = "rock";
+	else
+		typeOfDragon = "normal";
+	
+	return typeOfDragon;
+	}
+	
 	public int getEffect()
 	int addedEffect;
 	if (typeOfDragon.equals("fire"))
 		addedEffect = a + 50;
 	if (typeOfDragon.equals("ice"))
 		addedEffect = h + 50;
+	if (typeOfDragon.equals("rock"))
+		addedEffect = h + 200;
 	if (addedEffect > MAX_HEALTH)
 		addedEffect = MAX_HEALTH;
 	return addedEffect;
