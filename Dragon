@@ -1,6 +1,10 @@
 //started by Steven Porterfield (Syrobia) syrobia.github.io
 //package com.dragonslayer.syrobia.github
 
+/*TODO
+  * Set up attributes
+  /*
+  
 import java.util.Random;
 
 public class Dragon extends Character 
@@ -21,21 +25,25 @@ public class Dragon extends Character
 	
 	public int generateAttack(){
 	Random generator = new Random();
-	a = generator.nextInt(5)+1;
-	a *= 5;
+	a = generator.nextInt(3)+1;
+	a *= 50;
 	return a;
 	}
 	
 	public String typeOfDragon(){
 	int temp;
 	Random generator = new Random();
-	temp = generator.nextInt(3)+1; 
+	temp = generator.nextInt(6)+1; 
 	if (temp = 1)
 		typeOfDragon = "fire";
 	else if (temp = 2)
 		typeOfDragon = "ice";
 	else if (temp = 3)
 		typeOfDragon = "rock";
+	else if (temp = 4)
+		typeOfDragon = "lightning";
+	else if (temp = 5)
+		typeOfDragon = "teja";
 	else
 		typeOfDragon = "normal";
 	
@@ -46,10 +54,14 @@ public class Dragon extends Character
 	int addedEffect;
 	if (typeOfDragon.equals("fire"))
 		addedEffect = a + 50;
+	if (typeOfDragon.equals("lightning"))
+		addedEffect = a + 200;
 	if (typeOfDragon.equals("ice"))
 		addedEffect = h + 50;
 	if (typeOfDragon.equals("rock"))
 		addedEffect = h + 200;
+	if (typeOfDragon.equals("teja"))
+		addedEffect = a + 360;
 	if (addedEffect > MAX_HEALTH)
 		addedEffect = MAX_HEALTH;
 	return addedEffect;
