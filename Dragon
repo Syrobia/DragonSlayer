@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class Dragon extends Character 
 {
-  private static final int MAX_HEALTH = 300;
+  private static final int MAX_HEALTH = 500;
   private String typeOfDragon;
 	
-	public Character(int h, int a, int aE, int hE){
+	public Dragon(int h, int a, int aE, int hE){
 		super(h, a, aE, hE);
 	}
 	
@@ -24,6 +24,20 @@ public class Dragon extends Character
 		typeOfDragon = "normal";
 	
 	return typeOfDragon;
+	}
+	
+	public int generateHealth{
+	Random generator = new Random();
+	h = generator.nextInt(3)+1;
+	h *= 100;
+	retrun h;
+	}
+	
+	public int generateAttack(){
+	Random generator = new Random();
+	a = generator.nextInt(5)+1;
+	a *= 5;
+	return a;
 	}
 	
 	public int getEffect()
