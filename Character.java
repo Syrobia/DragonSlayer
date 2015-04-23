@@ -18,11 +18,19 @@ public class Character
 		hpEffect = hE;
 	}
 	
-	//Precondition: h+a = 10
+	//Postcondition: health + attack = 50;
 	public Character (int h, int a)
 	{
-		health = h*5;
-		attack = a*5;
+		if (h + a != 10) {
+			health = 5 * (int) (Math.random() * 10 + 1);
+			attack = 50 - health;
+			//this 10 (which is h + a) * 5, which is some effect modifier which was added for some reason
+		}
+		else {
+			health = h*5;
+			attack = a*5;
+		}
+		
 		atkEffect = (int) (Math.random()*attack) + 1;
 		hpEffect = (int) (Math.random()*health) + 1;
 	}
