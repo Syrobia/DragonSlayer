@@ -1,4 +1,4 @@
-public class Hero extends Characters {
+public class Hero extends Character {
 	
 	int potion = 0;
 	
