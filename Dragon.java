@@ -10,6 +10,8 @@ import java.util.Random;
 public class Dragon extends Character 
 {
   private static final int MAX_HEALTH = 750;
+  //change to public?
+  
   private String typeOfDragon;
 	
 	public Dragon(int h, int a, int aE, int hE){
@@ -18,31 +20,31 @@ public class Dragon extends Character
 	
 	public int generateHealth{
 	Random generator = new Random();
-	h = generator.nextInt(3)+1;
-	h *= 200;
-	retrun h;
+	super.setHealth(generator.nextInt(3)+1);
+	super.setHealth(super.getHealth() * 200);
+	return super.getHealth();
 	}
 	
 	public int generateAttack(){
 	Random generator = new Random();
-	a = generator.nextInt(3)+1;
-	a *= 50;
-	return a;
+	super.setAttack(generator.nextInt(3)+1);
+	super.setAttack(super.getAttack() * 50);
+	return super.getAttack();
 	}
 	
 	public String typeOfDragon(){
 	int temp;
 	Random generator = new Random();
 	temp = generator.nextInt(6)+1; 
-	if (temp = 1)
+	if (temp == 1)
 		typeOfDragon = "fire";
-	else if (temp = 2)
+	else if (temp == 2)
 		typeOfDragon = "ice";
-	else if (temp = 3)
+	else if (temp == 3)
 		typeOfDragon = "rock";
-	else if (temp = 4)
+	else if (temp == 4)
 		typeOfDragon = "lightning";
-	else if (temp = 5)
+	else if (temp == 5)
 		typeOfDragon = "teja";
 	else
 		typeOfDragon = "normal";
@@ -54,22 +56,28 @@ public class Dragon extends Character
 	int addedEffect;
 	int negativeEffect;
 	if (typeOfDragon.equals("fire"))
-		addedEffect = a + 75;
-		negativeEffect = h - 15;
+		addedEffect = super.getAttack() + 75;
+		negativeEffect = super.getHealth() - 15;
+		
 	if (typeOfDragon.equals("lightning"))
-		addedEffect = a + 225;
-		negativeEffect = h - 25;
+		addedEffect = super.getAttack() + 225;
+		negativeEffect = super.getHealth() - 25;
+		
 	if (typeOfDragon.equals("ice"))
-		addedEffect = h + 75;
-		negativeEffect = a - 15;
+		addedEffect = super.getHealth() + 75;
+		negativeEffect = super.getAttack() - 15;
+		
 	if (typeOfDragon.equals("rock"))
-		addedEffect = h + 225;
-		negativeEffect = a - 220;
+		addedEffect = super.getHealth() + 225;
+		negativeEffect = super.getAttack() - 220;
+		
 	if (typeOfDragon.equals("teja"))
-		addedEffect = a + 360;
-		negativeEffect = h + 100;
+		addedEffect = super.getAttack() + 360;
+		negativeEffect = super.getHealth() + 100;
+		
 	if (addedEffect > MAX_HEALTH)
 		addedEffect = MAX_HEALTH;
+		
 	return addedEffect;
 	return negativeEffect;
 	}
