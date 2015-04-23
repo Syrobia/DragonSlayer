@@ -4,10 +4,9 @@
  *Check Syntax-Make sure implementation works perfectly
  */
 
-public abstract class Item()
+public abstract class Item
 {
-  
-  private String name();
+  private String name;
   
   public Item(String newName)
   {
