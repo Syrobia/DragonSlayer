@@ -1,4 +1,4 @@
-//started by Micheal Head(Syrobot) www.github.com/Syrobot
+//started by Micheal Head(Syrobia) syrobia.github.io
 //package com.dragonslayer.syrobia.github
 
 public class Character
