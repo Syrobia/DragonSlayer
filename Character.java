@@ -4,14 +4,17 @@
 public class Character
 {
     public static final int MAX_HEALTH;
-   
+    
+    private String name;
+    
 	private int health;
 	private int attack;
 	
 	private int atkEffect;
 	private int hpEffect;
 	
-	public Character(int h, int a, int aE, int hE){
+	public Character(String n, int h, int a, int aE, int hE){
+		name = n;
 		health = h;
 		attack = a;
 		atkEffect = aE;
@@ -19,8 +22,10 @@ public class Character
 	}
 	
 	//Postcondition: health + attack = 50;
-	public Character (int h, int a)
+	public Character (String n, int h, int a)
 	{
+		name = n;
+		
 		if (h + a != 10) {
 			health = 5 * (int) (Math.random() * 10 + 1);
 			attack = 50 - health;
@@ -37,6 +42,11 @@ public class Character
 	
 	public String attack(Character e){
 		e.setHealth(e.getHealth - (attack + atkEffect));
+	}
+	
+	public void setName(String n)
+	{
+		name = n;
 	}
 	
 	public int setHealth(int h){
@@ -61,6 +71,11 @@ public class Character
 		int oldHpEffect = hpEffect;
 		hpEffect = hE;
 		return oldHpEffect;
+	}
+	
+	public String getName()
+	{
+		return name;
 	}
 	
 	public int getHealth(){
