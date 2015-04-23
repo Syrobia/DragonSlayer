@@ -21,17 +21,17 @@ public class Weapon extends Item
        damage = 1337;
        attributeNumber = 3;
     }
-    else if (name.indexOf("sword") > 0)
+    else if (name.indexOf("sword") >= 0)
     {
       damage = 100;
       attributeNumber = 1;
     }
-    else if (name.indexOf("club") > 0)
+    else if (name.indexOf("club") >= 0)
     {
       damage = 50;
       attributeNumber = 2;
     }
-    else if (name.indexOf("staff") > 0)
+    else if (name.indexOf("staff") >= 0)
     {
       damage = 25;
       attributeNumber = 3;
