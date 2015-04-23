@@ -2,8 +2,8 @@
 //package com.github.syrobia.dragon
 
 /*TODO
-  * Set up attributes
-  /*
+ * Set up attributes
+ */
   
 import java.util.Random;
 
@@ -14,8 +14,8 @@ public class Dragon extends Character
   
   private String typeOfDragon;
 	
-	public Dragon(int h, int a, int aE, int hE){
-		super(h, a, aE, hE);
+	public Dragon(String n, int h, int a, int aE, int hE){
+		super(n, h, a, aE, hE);
 	}
 	
 	public int generateHealth{
