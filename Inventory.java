@@ -1,5 +1,8 @@
 //package com.github.syrobia.dragonslayer.inventory;
 
+/*TODO
+ *Create Armor Class
+ */
 public class Inventory
 {
   Item[][] all = new Item[3][4];
