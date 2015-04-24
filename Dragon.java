@@ -9,8 +9,7 @@ import java.util.Random;
 
 public class Dragon extends Character 
 {
-  private static final int MAX_HEALTH = 750;
-  //change to public?
+  private final int MAX_HEALTH = 750;
   
   private String typeOfDragon;
  
@@ -77,9 +76,14 @@ public class Dragon extends Character
   
  if (addedEffect > MAX_HEALTH)
   addedEffect = MAX_HEALTH;
-  
- int[] returned = {addedEffect, negativeEffect};
+
  return returned;
+ }
+ 
+ public String toString()
+ {
+ }
+ 
  }
 }
  
