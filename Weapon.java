@@ -12,10 +12,9 @@ public class Weapon extends Item
     super(name);
   }
   
-  public String effect()
+  public void effect()
   {
     String name = super.getName().toLowerCase();
-    int total = 0;
     if (name.equals("syrobia"))
     {
        damage = 1337;
