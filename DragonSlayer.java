@@ -12,7 +12,6 @@ import java.util.Scanner;
 import java.util.Random;
 
 //Java Needed Exception Catchers
-import java.util.InputMismatchException;
 
 public class DragonSlayer {
    public static void main (String[] args) {
