@@ -18,5 +18,5 @@ public abstract class Item
     return name;
   }
   
-  abstract String effect();
+  abstract void effect();
 }
