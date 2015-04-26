@@ -40,6 +40,7 @@ public class Potion extends Item
     
     else
     {
+      System.out.println("That's not a valid potion!");
       healthEffect = 0;
     }
     
