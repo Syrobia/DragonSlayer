@@ -6,6 +6,7 @@
 public class Inventory
 {
   Item[][] all = new Item[3][4];
+  private int potionTotal = 0;
   
   public void addArmor(Armor armor) {
     
@@ -23,18 +24,18 @@ public class Inventory
   }
   
   public void addPotion(Potion potion){
-    
-    if (potion.getClass() == "Normal") {
-        all[2][0] = potion;
-    } else if { (potion.getClass() == "Strong")
-        all[2][1] = potion;
-    } else if { (potion.getClass() == "Weak")
-        all[2][2] = potion;
-    } else if { (potion.getClass() == "Posion")
-        all[2][3] = potion;
-    } else {
-      System.out.println ("That's not a potion!");
+    if (potionTotal < 3)
+    {
+      all[1][potionTotal] = potion;
+      potionTotal++;
+    }
+    else
+    {
+      System.out.println ("You can't hold any more potions!");
     }
   }
+  
+  public int getPotionAmount ()
+    return potionTotal;
    
 }
