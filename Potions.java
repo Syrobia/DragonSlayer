@@ -1,5 +1,9 @@
 public class Potion extends Item
 {
+  /*TODO
+   *Throwable potions aswell?
+   *
+   */
   private int healthEffect;
   private String clase;
   
@@ -25,12 +29,12 @@ public class Potion extends Item
     }
     else if (name.indexOf("fire") >= 0)
     {
-      healthEffect = -15;
+      healthEffect = 5;
       clase = "Weak";
     }
     else if (name.indexOf("posion") >= 0)
     {
-      healthEffect = -10;
+      healthEffect = 1;
       clase = "Posion";
     }
     
