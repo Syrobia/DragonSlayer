@@ -13,7 +13,7 @@ public abstract class Item
     name = newName;
   }
   
-  public String returnName()
+  public String getName()
   {
     return name;
   }
