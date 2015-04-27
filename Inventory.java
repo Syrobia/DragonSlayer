@@ -37,5 +37,20 @@ public class Inventory
   
   public int getPotionAmount ()
     return potionTotal;
-   
+  
+  public void addWeapon(Weapon weapon){
+    all[2][0];
+  }
+  
+  public String toString()
+  {
+    for (Item[] items : all)
+    {
+      for (Item item : items)
+      {
+        System.out.print (item + " ");
+      }
+      System.out.println();
+    }
+  }
 }
