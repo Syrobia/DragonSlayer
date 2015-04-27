@@ -64,5 +64,5 @@ public class Potion extends Item
   public String toString()
   {
     return super.returnName() + "\nHealth Level: " + healthEffect + "\nClass: " + clase;
-  }
+  } 
 }
