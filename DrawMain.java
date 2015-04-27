@@ -1,18 +1,21 @@
 //Syrobia
 //package com.github.syrobia.dragonslayer.drawmain;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
-import java.awt.geom.Ellipse2D;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
-public class DrawMain {
+
+public class DrawMain extends JPanel{
 	
-	public void DrawMain (Graphics g) {
+	public DrawMain() {
+		addMouseListener (new DrawMain());
+		setBackground (Color.green);
+	}
+	
+	public void paintMain (Graphics g) {
 		Graphics2D e = (Graphics2D) g;
+		
 	}
 	
 	//Runner	
