@@ -95,3 +95,4 @@ public class Character
   return hpEffect;
  }
 }
+ 
