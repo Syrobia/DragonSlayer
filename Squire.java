@@ -7,5 +7,5 @@ public class Squire extends Character {
  
  public Squire(String n, int h, int a, int aE, int hE) {
   super(n, h, a, aE, hE);
- }
+ } 
 }
