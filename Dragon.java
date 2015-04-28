@@ -1,9 +1,5 @@
 //started by Steven Porterfield (Syrobia) syrobia.github.io
 //package com.github.syrobia.dragon
-
-/*TODO
- * Set up attributes
- */
   
 import java.util.Random;
 
@@ -15,8 +11,8 @@ public class Dragon
    private String name;
    private int health, attack, defense;
  
-   public Dragon(String n){
-      name = n;
+   public Dragon(String dragonName){
+      name = dragonName;
    }
  
    public int generateHealth(){
