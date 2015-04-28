@@ -43,10 +43,9 @@ public class Inventory
       return potionTotal;
    }
   
-   public void addWeapon(Weapon weapon){
-      //all[2][0];
-      //not a statement
-   }
+   public void addWeapon(Weapon weapon)
+      all[2][0] = weapon;
+   
   
    public String toString()
    {
