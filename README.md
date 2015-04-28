@@ -2,7 +2,7 @@
 <p>
 #README<br>
 ##DRAGONSLAYER:<br>
--Create some Graphics up in this bi.<br>
+-Create some Graphics up in this bitch.<br>
 -Rewire the DragonSlayer.java class to implement all these methods we made.<br>
 -<br>
 <br>
