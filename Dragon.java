@@ -7,28 +7,39 @@
   
 import java.util.Random;
 
-public class Dragon extends Character 
+public class Dragon
 {
    private final int MAX_HEALTH = 750;
   
    private String typeOfDragon;
+   private String name;
+   private int health, attack, defense;
  
-   public Dragon(String name, int h, int a, int aE, int hE){
-      super(name, h, a, aE, hE);
+   public Dragon(String n){
+      name = n;
    }
  
    public int generateHealth(){
       Random generator = new Random();
-      super.setHealth(generator.nextInt(3)+1);
-      super.setHealth(super.getHealth() * 200);
-      return super.getHealth();
+      health = generator.nextInt(4)+1;
+      health = health * 200;
+      if (health > MAX_HEALTH)
+        health = MAX_HEALTH;
+      return health;
    }
  
    public int generateAttack(){
       Random generator = new Random();
-      super.setAttack(generator.nextInt(3)+1);
-      super.setAttack(super.getAttack() * 50);
-      return super.getAttack();
+      attack = generator.nextInt(3)+1;
+      attack = attack * 50;
+      return attack;
+   }
+   
+   public int generateArmor(){
+      Random generator = new Random();
+      defense = generator.nextInt(3)+1;
+      defense = defense * 25;
+      return defense;
    }
  
    public String typeOfDragon(){
@@ -44,49 +55,41 @@ public class Dragon extends Character
       else if (temp == 4)
          typeOfDragon = "lightning";
       else if (temp == 5)
-         typeOfDragon = "teja";
+         typeOfDragon = "tejaswagmasta#360noscopestomahacks";
       else
          typeOfDragon = "normal";
    
       return typeOfDragon;
    }
  
-   public int[] getEffect(){
-      int addedEffect = 0;
-      int negativeEffect = 0;
+   public int getAddedAttack(){
       if (typeOfDragon.equals("fire"))
-         addedEffect = super.getAttack() + 75;
-      negativeEffect = super.getHealth() - 15;
-   
+        attack = attack + 25;
       if (typeOfDragon.equals("lightning"))
-         addedEffect = super.getAttack() + 225;
-      negativeEffect = super.getHealth() - 25;
+        attack = attack + 50;
+      if (typeOfDragon.equals("tejaswagmasta#360noscopestomahacks"))
+        attack = attack + 100;
+      
+      return attack;
+   }
    
+   public int getAddedDefense(){
       if (typeOfDragon.equals("ice"))
-         addedEffect = super.getHealth() + 75;
-      negativeEffect = super.getAttack() - 15;
-   
+        defense = defense + 50;
       if (typeOfDragon.equals("rock"))
-         addedEffect = super.getHealth() + 225;
-      negativeEffect = super.getAttack() - 220;
-   
-      if (typeOfDragon.equals("teja"))
-         addedEffect = super.getAttack() + 360;
-      negativeEffect = super.getHealth() + 100;
-   
-      if (addedEffect > MAX_HEALTH)
-         addedEffect = MAX_HEALTH;
-   
-      int[] returned = {addedEffect, negativeEffect};
-      return returned;
+        defense = defense + 100;
+        
+      return defense;
    }
  
    public String toString()
    {
-      return "";
+     String dragonStats = "";
+     dragonStats = "Name: " + name + "\n";
+     dragonStats = "The dragon has the elemental power of " + typeOfDragon() + "\n";
+     dragonStats = "Attack: " + getAddedAttack() + "\n";
+     dragonStats = "Defense: " + getAddedDefense() + "\n";
+     
+     return dragonStats;
    }
- 
- 
 }
- 
- 
