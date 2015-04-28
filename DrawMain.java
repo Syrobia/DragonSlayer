@@ -9,10 +9,10 @@ import javax.swing.*;
 public class DrawMain extends JPanel implements MouseMotionListener{
 	private int mX, mY;
 	public DrawMain() {
-		addMouseListener (new DrawMain());
-		setBackground (Color.green);
+		logic();
 	}
 	
+
 	public void mouseMoved(MouseEvent me) {
     		mX = (int) me.getPoint().getX();
 		mY = (int) me.getPoint().getY();
@@ -32,11 +32,17 @@ public class DrawMain extends JPanel implements MouseMotionListener{
 		
 	}
 	
+	public void logic() {	
+	JFrame frame = new JFrame("DragonSlayer -by Syrobia");
+	frame.setSize(420, 640);
+	frame.setVisible(true);
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	addMouseListener (new DrawMain());
+	setBackground (Color.green);
+	}
 	//Runner	
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("DragonSlayer -by Syrobia");
-		frame.setSize(420, 640);
-		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		DrawMain();
 	}
 }
