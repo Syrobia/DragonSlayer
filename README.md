@@ -16,8 +16,8 @@
 -Improve it<br>
 -Make Games tab with some cool flashgames that we can legally add on our site??<br>
 
-###micheal's magic corner of shitty ideas
-- pure element bullshit
+###micheal's magic corner of ideas
+- pure element bull
 - mixing of elements, but still cast pure
 - enchanted into weapons, etc.
 - specific roles (shield, attack, etc.)
@@ -29,7 +29,7 @@
 - combinational
 - experimental (might go with conditional, situational, mixing of elements)
 - from things
-- witchcraft potion nature bullshit
+- witchcraft potion nature bull
 - nature stuff
 - souls
 - blood
