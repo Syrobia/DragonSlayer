@@ -13,8 +13,8 @@ public class Dragon extends Character
   
    private String typeOfDragon;
  
-   public Dragon(String n, int h, int a, int aE, int hE){
-      super(n, h, a, aE, hE);
+   public Dragon(String name, int h, int a, int aE, int hE){
+      super(name, h, a, aE, hE);
    }
  
    public int generateHealth(){
