@@ -5,7 +5,7 @@ All ideas will be written here------------------------------------------
 -----------------------------------------------------------------------
 
 Actual Game Logic/Loop will be written here---------------------------------------
-*
+* 
 *
 -----------------------------------------------------------------------
 
@@ -19,3 +19,42 @@ Actual Game Logic/Loop will be written here-------------------------------------
 *
 *
 -----------------------------------------------------------------------
+
+micheal's magic corner of magical ideas about magic and shiitake
+	pure elements
+		fire, earth, air, water -- typical
+		planetary
+		zodiac-like
+		based off of symbols and such
+		custom element types
+		metals / various substances (see http://www.zachtronics.com/the-codex-of-alchemical-engineering/)
+	mixing of elements, but still cast pure
+	enchanged into weapons, items
+	support-type magicks -- raising HP, etc.
+	uses an item to facilitate / allow use of magic
+	item = spell e.g. scroll, spellbook
+	spells made from other things, put into items
+		"bound" into an item -- like a turnip
+		similar to the previous idea
+	summons
+	situational / conditional
+		combinational
+		experimental
+		where spells do arbitrary and initially useless things (oh! a giant metal ball has appeared in front my face!)
+	from things -- plants, items, etc. -- learned from?
+	witchcraft / potions
+	nature stuff
+	blood
+	souls
+	based off of some obscure heirarchy system of elements and conversions
+	an element or whatever that is base of all things
+	glyphs / runes
+	steam-work
+	should be obscure / hard to get?
+		should be grateful + happy tyo have magic
+		some serious skill rust
+	affinity
+	alchemy
+	should feel effect of magic
+	rather than having exact spells with fancy names, you simply use an amount of power of an element or etc.
+		see Magicka (game)
