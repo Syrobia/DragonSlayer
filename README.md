@@ -17,33 +17,4 @@
 -Make Games tab with some cool flashgames that we can legally add on our site??</br>
 
 ###micheal's magic corner of ideas
-- pure element bull
-- mixing of elements, but still cast pure
-- enchanted into weapons, etc.
-- specific roles (shield, attack, etc.)
-- uses an item to facilitate magic use
-- item = spell
-- spells made from other things, put into items
-- summons
-- situational / conditional
-- combinational
-- experimental (might go with conditional, situational, mixing of elements)
-- from things
-- witchcraft potion nature bull
-- nature stuff
-- souls
-- blood
-- based off of some obscure heirarchy system of elements and conversions
-- glyphs
-- http://www.zachtronics.com/the-codex-of-alchemical-engineering/
-- screw it, how about steam-work, get sum industry up in this bitch
-  - http://www.zachtronics.com/the-bureau-of-steam-engineering/
-- or soviet electrical engineering http://www.zachtronics.com/kohctpyktop-engineer-of-the-people/
-- magic should be quite obscure and hard to get.
-  - players / characters should be grateful for magic
-  - should be hard to get
-  - should have SOME SERIOUS SKILL RUST, BRUH
-- affinity system
-- alchemy
-- PLAYERS SHOULD FEEL EFFECT OF MAGIC
-  - SIMPLY DOING MORE DAMAGE OR APPLYING AN EFFECT EACH TURN != GOOD MAGIC
+- jk ammad and teja have already decided on something and probably will ignore the fact that I want to consider all the options instead of going with the typical "oh! let's go with the first idea that pops into my head / let's copy from another game because we're not original!" that will completely bore me to death and will inevitably lead to me never actually playing the game or ever wanting to work on that branch of the code
