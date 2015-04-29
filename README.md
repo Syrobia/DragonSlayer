@@ -1,3 +1,6 @@
+#NO CODING-PAUSE ALL CODING ATTEMPTS-REINITIATE DESIGN PROCESS
+<br>
+<br>
 #DragonSlayer-Created by Syrobia
 <p>
 #README</br>
