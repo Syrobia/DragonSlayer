@@ -1,4 +1,4 @@
-#NO CODING-PAUSE ALL CODING ATTEMPTS-REINITIATE DESIGN PROCESS
+#coding is probably possible now #allinthistogether
 <br>
 <br>
 #DragonSlayer-Created by Syrobia
