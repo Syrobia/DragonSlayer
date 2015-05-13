@@ -5,7 +5,8 @@
 <p>
 #README</br>
 ##DRAGONSLAYER:</br>
--Create some Graphics up in this bizness.</br>
+-FOCUS ON CODING V1.0 [1 player, 1 Dragon, Small Player Inv, No Magic] <br>
+   -Graphics and add-ons (Magic, Allied AIs, etc.) will come later in V2.0<br>
 -Rewire the DragonSlayer.java class to implement all these methods we made.<br>
 -</br>
 </br>
