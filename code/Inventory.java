@@ -10,7 +10,21 @@ public class Inventory
   
    public void addArmor(Armor armor) {
     
-      if (armor.getClass() == "Helmet"){
+      switch (armor.getClass())
+      {
+         case "Helmet": all[0][0] = armor;
+            break;
+         case "Chestplate": all[0][1] = armor;
+            break;
+         case "Leggings": all[0][2] = armor;
+            break;
+         case "Boots": all[0][3] = armor;
+            break;
+         default: System.out.println("ERROR: INVALID TYPE OF ARMOR");
+            break;
+      }
+      //OLD CODE:
+      /*if (armor.getClass() == "Helmet"){
          all[0][0] = armor;
       } 
       else if (armor.getClass() == "Chestplate"){
@@ -24,7 +38,7 @@ public class Inventory
       } 
       else {
          System.out.println ("That's not armor!");
-      }
+      }*/
    }
   
    public void addPotion(Potion potion){
