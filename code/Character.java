@@ -3,44 +3,53 @@
 
 public class Character
 {
-    public static final int MAX_HEALTH = 100;
-    
-    private String name;
-    
- private int health;
- private int attack;
- 
- private int atkEffect;
- private int hpEffect;
- 
- public Character(String n, int h, int a, int aE, int hE){
-  name = n;
-  health = h;
-  attack = a;
-  atkEffect = aE;
-  hpEffect = hE;
- }
- 
- //Postcondition: health + attack = 50;
- public Character (String n, int h, int a)
- {
-  name = n;
+  //reference/object initiation
+  private String name;  
   
-  if (h + a != 10) {
-   health = 5 * (int) (Math.random() * 10 + 1);
-   attack = 50 - health;
-   //this 10 (which is h + a) * 5, which is some effect modifier which was added for some reason
-  }
-  else {
-   health = h*5;
-   attack = a*5;
+  //constant initiation
+  public final int MAX_HEALTH;
+    
+  //variable initiation
+  private int health;
+  private int attack;
+  private int atkExtra; 
+  private int hpExtra;
+  
+  public Character()
+  {
+  	MAX_HEALTH = 100;
+  	name = "";
+  	health = 100;
+  	attack = 10;
+  	atkExtra = 0;
+  	hpExtra = 0;
   }
   
-  atkEffect = (int) (Math.random()*attack) + 1;
-  hpEffect = (int) (Math.random()*health) + 1;
- }
+  public Character(String n, int h, int a, int aE, int hE, int maxH)
+  {
+  	MAX_HEALTH = maxH;
+    name = n;
+    health = h;
+    attack = a;
+    atkExtra = aE;
+    hpExtra = hE;
+    
+    if (health > MAX_HEALTH)
+    { 
+    	//i'm not up for the program closing with an exception, and especially not up for dealing with try/catch
+      //so for now, we'll just force an error message into the game screen
+      
+    	System.out.println("--------------------------------");
+    	System.out.println("ERR:37: code/Character.java     ");
+    	System.out.println("health greater than MAX_HEALTH"  );
+    	System.out.println("health will be set to MAX_HEALTH");
+    	System.out.println("--------------------------------");
+    	
+    	health = MAX_HEALTH;
+    }
+	}
  
- public void attack(Character e){
+  public void attack(Character e){
   e.setHealth(e.getHealth() - (attack + atkEffect));
   
  }
@@ -50,48 +59,48 @@ public class Character
   name = n;
  }
  
- public int setHealth(int h){
+ public int setHp(int h){
   int oldHealth = health;
   health = h;
   return oldHealth;
  }
  
- public int setAttack(int a){
+ public int setAtk(int a){
   int oldAttack = attack;
   attack = a;
   return oldAttack;
  }
  
- public int setAtkEffect(int aE){
+ public int setAtkExt(int aE){
   int oldAEffect = atkEffect;
   atkEffect = aE;
   return oldAEffect;
  }
  
- public int setHpEffect(int hE){
+ public int setHpExt(int hE){
   int oldHpEffect = hpEffect;
   hpEffect = hE;
   return oldHpEffect;
  }
  
- public String getName()
+ public String name()
  {
   return name;
  }
  
- public int getHealth(){
+ public int hp(){
   return health;
  }
  
- public int getAttack(){
+ public int atk(){
   return attack;
  }
  
- public int getAtkEffect(){
+ public int atkExt(){
   return atkEffect;
  }
  
- public int getHpEffect(){
+ public int hpExt(){
   return hpEffect;
  }
 }
