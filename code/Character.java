@@ -33,6 +33,7 @@ public class Character
     attack = a;
     atkExtra = aE;
     hpExtra = hE;
+  }
     
     if (health > MAX_HEALTH)
     { 
