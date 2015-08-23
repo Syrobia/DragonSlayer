@@ -1,7 +1,12 @@
 public class Armor extends Item
 {
+   public static final int HELM = 0;
+   public static final int CHEST = 1;
+   public static final int LEG = 2;
+   public static final int BOOT = 3;
+   
    private int protection;
-   private byte type;
+   private int type;
    
    public Armor (String name)
    {
@@ -15,22 +20,22 @@ public class Armor extends Item
       if (name.indexOf("helm") >= 0)
       {
          protection = 10;
-         type = 0;
+         type = HELM;
       }
       else if (name.indexOf("chest") >= 0)
       { 
          protection = 25;
-         type = 1;
+         type = CHEST;
       }
       else if (name.indexOf("leg") >= 0)
       {
          protection = 15;
-         type = 2
+         type = LEG;
       }
       else if (name.indexOf("boot") >= 0)
       {
          protection = 5;
-         type = 3;
+         type = BOOT;
       }
       else
       {
