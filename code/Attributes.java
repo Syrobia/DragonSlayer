@@ -1,6 +1,8 @@
 //Syrobia
 //package com.github.syrobia.dragonslayer.attributes;
 
+//DECLARED INACTIVE FOR INITIAL RELEASE (WORK ON IT LATER)
+
 public class Attributes{
     
   private String attribute = "";
