@@ -39,7 +39,7 @@ public class Armor extends Item
       }
       else
       {
-         protection = 5;
+         protection = 10;
          type = (int) (Math.random() * 4); //int from 0 to 3
       }
    }
