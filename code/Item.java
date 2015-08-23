@@ -8,9 +8,9 @@ public abstract class Item
 {
   private String name;
   
-  public Item(String newName)
+  public Item(String _name)
   {
-    name = newName;
+    name = _name;
   }
   
   public String getName()
