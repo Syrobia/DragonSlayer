@@ -1,7 +1,7 @@
 public class Armor extends Item
 {
    private int protection;
-   private String clase;
+   private byte type;
    
    public Armor (String name)
    {
@@ -11,54 +11,47 @@ public class Armor extends Item
    
    public void effect()
    {
-      //lolcats
       String name = super.returnName().toLowerCase();
       if (name.indexOf("helm") >= 0)
       {
          protection = 10;
-         clase = "Helmet";
+         type = 0;
       }
       else if (name.indexOf("chest") >= 0)
       { 
          protection = 25;
-         clase = "Chestplate";
+         type = 1;
       }
       else if (name.indexOf("leg") >= 0)
       {
          protection = 15;
-         clase = "Leggings";
+         type = 2
       }
       else if (name.indexOf("boot") >= 0)
       {
          protection = 5;
-         clase = "Boots";
+         type = 3;
       }
-       
       else
       {
-         protection = 0;
-      }
-      
-      if (name.indexOf("syrobia") >= 0)
-      {
-         protection = 420;
-         clase = "#BLAZEIT";
+         protection = 5;
+         type = (int) (Math.random() * 4); //int from 0 to 3
       }
    }
    
-   public int getProtection()
+   public int getProt()
    {
       return protection;
    }
    
-   public String getClassType()
+   public int getType()
    {
-      return clase;
+      return type;
    }
    
    public String toString()
    {
-      return super.returnName() + "\nProtection Level: " + protection + "\nClass: " + clase;
+      return super.returnName() + "\nProtection Level: " + protection + "\ntype: " + type;
    }
 }
       
