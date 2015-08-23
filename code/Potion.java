@@ -19,12 +19,10 @@ public class Potion extends Item
     if (name.indexOf("normal") >= 0)
     {
       healAmt = 10;
-      clase = "Normal";
     }
     else if (name.indexOf("strong") >= 0)
     { 
       healAmt = 25;
-      clase = "Strong";
     }
     else
     {
