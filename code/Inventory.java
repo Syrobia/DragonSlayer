@@ -5,71 +5,60 @@
  */
 public class Inventory
 {
-   Item[][] all = new Item[3][4];
-   private int potionTotal = 0;
+   Weapon wpn = new Weapon();
+   Armor[] amr = new Armor[4];
+   Potion[] pot = new Potion[3];
   
-   public void addArmor(Armor armor) {
-    
-      switch (armor.getClass())
-      {
-         case "Helmet": all[0][0] = armor;
-            break;
-         case "Chestplate": all[0][1] = armor;
-            break;
-         case "Leggings": all[0][2] = armor;
-            break;
-         case "Boots": all[0][3] = armor;
-            break;
-         default: System.out.println("ERROR: INVALID TYPE OF ARMOR");
-            break;
-      }
-      //OLD CODE:
-      /*if (armor.getClass() == "Helmet"){
-         all[0][0] = armor;
+   public void addArmor(Armor armor) 
+   {
+      if (armor.getType() == Armor.HELM){
+         amr[HELM] = armor;
       } 
-      else if (armor.getClass() == "Chestplate"){
-         all[0][1] = armor;
+      else if (armor.getType() == Armor.CHEST){
+         amr[CHEST] = armor;
       } 
-      else if (armor.getClass() == "Leggings"){
-         all[0][2] = armor;
+      else if (armor.getType() == Armor.LEG){
+         amr[LEG] = armor;
       } 
-      else if (armor.getClass() == "Boots"){
-         all[0][3] = armor;
+      else if (armor.getType() == Armor.BOOT){
+         amr[BOOT] = armor;
       } 
-      else {
-         System.out.println ("That's not armor!");
-      }*/
    }
   
-   public void addPotion(Potion potion){
-      if (potionTotal < 3)
+   public void addPotion(Potion potion)
+   {
+      for (int k = 0; k < pot.length; k++)
       {
-         all[1][potionTotal] = potion;
-         potionTotal++;
-      }
-      else
-      {
-         System.out.println ("You can't hold any more potions!");
+         if (pot[k] != null)
+         {
+            pot[k] = potion;
+            k = pot.length; //a cheap way of exiting the loop
+         }
       }
    }
   
-   public int getPotionAmount (){
-      return potionTotal;
+   public int getPotNum ()
+   {
+      int count;
+      
+      for (int k = 0; k < pot.length; k++)
+      {
+         if(pot[k] != null)
+         {
+            count++
+         }
+      }
+      
+      return count;
    }
   
    public void addWeapon(Weapon weapon)
-      all[2][0] = weapon;
-   
+   {
+      wpn = Weapon;
+   }
   
    public String toString()
    {
-      for (Item[] items : all)
-      {
-         for (Item item : items)
-         {
-            System.out.print (item + " ");
-         }
-         System.out.println();
-      }
+      //TODO
    }
 }
