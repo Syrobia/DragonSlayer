@@ -4,8 +4,7 @@ public class Potion extends Item
    *Throwable potions aswell?
    *
    */
-  private int healthEffect;
-  private String clase;
+  private int healAmt;
   
   public Potion (String name)
   {
@@ -19,50 +18,27 @@ public class Potion extends Item
     String name = super.returnName().toLowerCase();
     if (name.indexOf("normal") >= 0)
     {
-      healthEffect = 10;
+      healAmt = 10;
       clase = "Normal";
     }
     else if (name.indexOf("strong") >= 0)
     { 
-      healthEffect = 25;
+      healAmt = 25;
       clase = "Strong";
     }
-    else if (name.indexOf("fire") >= 0)
-    {
-      healthEffect = 5;
-      clase = "Weak";
-    }
-    else if (name.indexOf("posion") >= 0)
-    {
-      healthEffect = 1;
-      clase = "Posion";
-    }
-    
     else
     {
-      System.out.println("That's not a valid potion!");
-      healthEffect = 0;
-    }
-    
-    if (name.indexOf("syrobia")
-    {
-      healthEffect = 420;
-      clase = "#BLAZEIT";
+      health = (int) (Math.random() * 21 + 5) //int from 5 to 25, i think
     }
   }
   
-  public int getHealthEffect()
+  public int getHealAmt()
   {
-    return healthEffect;
-  }
-  
-  public String getClass()
-  {
-    return clase;
+    return healAmt;
   }
   
   public String toString()
   {
-    return super.returnName() + "\nHealth Level: " + healthEffect + "\nClass: " + clase;
+    return super.returnName() + "\nHeal Amount: " + healthEffect;
   } 
 }
