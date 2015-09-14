@@ -3,12 +3,11 @@
   
 import java.util.Random;
 
-public class Dragon
+public class Dragon extends Character
 {
    private final int MAX_HEALTH = 750;
   
    private String name;
-   private int health, attack, defense;
  
    public Dragon(String dragonName){
       name = dragonName;
@@ -20,11 +19,11 @@ public class Dragon
  
    public int generateHealth(){
       Random generator = new Random();
-      health = generator.nextInt(4)+1;
-      health = health * 200;
-      if (health > MAX_HEALTH)
-        health = MAX_HEALTH;
-      return health;
+      setHp(generator.nextInt(4)+1);
+      setHp(hp()*200)
+      if (hp() > MAX_HEALTH)
+        setHp(MAX_HEALTH);
+      return hp();
    }
  
    public int generateAttack(){
